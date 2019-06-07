@@ -1,0 +1,17 @@
+<div *ngIf="(snapshot | async) as pic">
+  {{ pic.name }}
+</div>
+<p>{{ file.name }}</p>
+
+<br />
+
+Status:
+<br />
+
+<div *ngIf="(percentage | async) as pct">
+  <div *ngIf="pct < 100">
+    <progress [value]="pct" max="100"></progress>
+    Uploading: {{ pct | number }}%
+  </div>
+  <p *ngIf="pct === 100">Done!</p>
+</div>

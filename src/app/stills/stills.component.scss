@@ -1,0 +1,20 @@
+.img-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+img {
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100vh;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}

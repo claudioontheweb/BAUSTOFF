@@ -1,0 +1,67 @@
+/*
+ ################################
+ IMPORTS
+*/
+@import "colors";
+
+// FONTS
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display|Roboto");
+
+/*
+
+    font-family: 'Noto Sans', sans-serif;
+
+    font-family: 'Playfair Display', serif;
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+
+/*
+ ################################
+ GLOBAL DEFINITIONS
+*/
+
+html {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $concrete;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 1vw;
+}
+
+a {
+  font-family: "Playfair Display", serif;
+  color: $concrete;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $quitered;
+  }
+
+  &.active {
+    color: $quitered;
+  }
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

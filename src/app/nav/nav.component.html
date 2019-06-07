@@ -1,0 +1,21 @@
+<div *ngIf="!isMobile">
+  <ul>
+    <li><a routerLink="/home" id="home">home</a></li>
+    <li><a routerLink="/stills" id="stills">stills</a></li>
+    <li><a routerLink="/profile" id="profile">profile</a></li>
+    <li><a routerLink="/about" id="about">about</a></li>
+  </ul>
+
+  <h1>BAUSTOFF</h1>
+</div>
+
+<div *ngIf="isMobile">
+  <button (click)="toggleMenu()">Menu</button>
+</div>
+
+<ul *ngIf="mobileMenu" class="mobile_menu">
+  <li class="mobile_link"><a routerLink="/home" id="home">home</a></li>
+  <li class="mobile_link"><a routerLink="/stills" id="stills">stills</a></li>
+  <li class="mobile_link"><a routerLink="/profile" id="profile">profile</a></li>
+  <li class="mobile_link"><a routerLink="/about" id="about">about</a></li>
+</ul>

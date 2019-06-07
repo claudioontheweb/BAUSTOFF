@@ -1,0 +1,11 @@
+<app-nav [active]="'stills'"></app-nav>
+
+<div class="main-container">
+  <div class="image_container">
+    <img id="watermark" src="../../assets/title_mobile.png" />
+    <img [src]="imageUrl" class="image" />
+  </div>
+  <div class="image_description_container">
+    <p class="image_description">"{{ imgID | slice: 0:-18 }}"</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+ul {
+  display: inline-flex;
+
+  li {
+    margin: 20px;
+  }
+}
+
+h1 {
+  float: right;
+}
+
+button {
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+}
+
+.mobile_menu {
+  position: absolute;
+  border: 1px solid black;
+  background: white;
+  display: block;
+  z-index: 999999;
+}
+
+.mobile_link {
+}

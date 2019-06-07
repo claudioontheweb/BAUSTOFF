@@ -1,0 +1,39 @@
+<app-nav [active]="'profile'"></app-nav>
+
+<div class="main-container">
+  <div
+    *ngIf="(userService.user$ | async); then authenticated; else guest"
+  ></div>
+
+  <app-loading-spinner *ngIf="userService.showSpinner"></app-loading-spinner>
+
+  <ng-template #guest>
+    <p class="bold">
+      Hello guest.
+    </p>
+    <p>Please log in in order to use all functions.</p>
+
+    <br />
+
+    <button class="btn" (click)="userService.login()">
+      Login with Google
+    </button>
+  </ng-template>
+
+  <ng-template #authenticated>
+    <div *ngIf="(userService.user$ | async) as user">
+      <img id="avatar" [src]="user.photoURL" [alt]="user.displayName" />
+
+      <p class="bold">
+        Hello, <span class="txt-quitered">{{ user.displayName }}</span>
+      </p>
+      <p>{{ user.email }}</p>
+
+      <br />
+
+      <button class="btn" (click)="userService.logOut()">
+        Log out
+      </button>
+    </div>
+  </ng-template>
+</div>

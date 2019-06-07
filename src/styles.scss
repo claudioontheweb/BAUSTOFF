@@ -1,0 +1,75 @@
+/*
+ ################################
+ IMPORTS
+*/
+@import "./styles/colors";
+@import "./styles/config";
+
+.main-container {
+  height: 80vh;
+  width: 70vw;
+  border-top: 1px solid black;
+  padding: 20px;
+  margin: 0;
+}
+
+.btn {
+  padding: 10px 20px 10px 20px;
+  border: 1px solid $concrete;
+  background: $quitered;
+  color: white;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    background: darken($quitered, 3);
+  }
+
+  &:active {
+    background: darken($quitered, 6);
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.txt-quitered {
+  color: $quitered;
+}
+
+.file-drop {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  font-weight: 200;
+  height: 300px;
+  border: 2px dashed darken($smokingice, 3);
+  border-radius: 5px;
+  background: white;
+  margin: 10px 0;
+
+  &.hovering {
+    border: 2px dashed $naturegreen;
+    color: #dadada !important;
+  }
+
+  .file-label {
+    font-size: 1.2em;
+  }
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+}

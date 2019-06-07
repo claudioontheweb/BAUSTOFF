@@ -1,0 +1,13 @@
+<app-nav [active]="'stills'"></app-nav>
+
+<div class="main-container">
+  <a *ngIf="userService.user$ | async" routerLink="upload">
+    Upload
+  </a>
+
+  <div class="img-container">
+    <div *ngFor="let still of stills | async">
+      <img routerLink="{{ still.id }}" [src]="still.downloadURL" />
+    </div>
+  </div>
+</div>

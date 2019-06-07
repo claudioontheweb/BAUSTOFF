@@ -1,0 +1,22 @@
+<app-nav [active]="'stills'"></app-nav>
+
+<div class="main-container">
+  <a routerLink="/stills">
+    Back
+  </a>
+  <div
+    class="file-drop"
+    appFileDrop
+    (hovered)="toggleHover($event)"
+    (dropped)="onDrop($event)"
+    [class.hovering]="isHovering"
+  >
+    <p>Drag picture(s) here to upload</p>
+  </div>
+
+  <p>Uploads:</p>
+
+  <div *ngFor="let file of files" class="upload_item">
+    <upload-task [file]="file"></upload-task>
+  </div>
+</div>

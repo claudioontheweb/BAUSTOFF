@@ -1,0 +1,28 @@
+.image_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.image {
+  width: 60vh;
+}
+
+.image_description_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image_description {
+  text-transform: uppercase;
+}
+
+#watermark {
+  position: absolute;
+  float: left;
+  padding: 10px;
+  width: 100px;
+  height: 20px;
+  opacity: 0.4;
+}
